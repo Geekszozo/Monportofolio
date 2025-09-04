@@ -1,0 +1,246 @@
+/* --- style.css complet maquillé --- */
+
+/* Police et styles généraux */
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #2e7d32; /* vert foncé élégant */
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .brand a {
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* --- Menu horizontal --- */
+header .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;  /* espace entre les liens */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+header .nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+header .nav a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #fff;
+    width: 0;
+    transition: width 0.3s;
+}
+
+header .nav a:hover::after {
+    width: 100%; /* barre sous le lien au survol */
+}
+
+header .nav a:hover {
+    background-color: rgba(255,255,255,0.2);
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #0d7a0d;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #a5d6a7, #c8e6c9);
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1b5e20;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Boutons */
+.hero .btn, button.submit, button.cancel {
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Times New Roman", Times, serif;
+    transition: all 0.3s ease;
+}
+
+.hero .btn {
+    background: linear-gradient(to right, #4CAF50, #81C784);
+    color: white;
+    text-decoration: none;
+}
+
+.hero .btn:hover,
+button.submit:hover {
+    opacity: 0.85;
+}
+
+button.cancel {
+    background: #f44336;
+    color: white;
+}
+
+button.cancel:hover {
+    opacity: 0.85;
+}
+
+/* Formulaire */
+form {
+    background-color: white;
+    padding: 35px 25px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 0 auto 50px auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Champs du formulaire */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Boutons du formulaire */
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Séparateurs stylisés */
+hr {
+    border: none;
+    border-top: 2px solid #4CAF50;
+    margin: 30px 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.7;
+}
+
+/* Titres des sections */
+h2, h3 {
+    color: #2e7d32;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Résultat du formulaire */
+#result {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #2e7d32;
+}
+
+/* Cartes / sections des compétences ou projets */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Listes avec séparateurs entre items */
+ul li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+ul li::before {
+    content: "•";
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+    header .container, main.container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .nav {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+}

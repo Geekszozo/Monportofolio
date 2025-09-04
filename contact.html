@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Maria Almoctar Idrissa</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand"><a href="iAccueil.html">Mon Portfolio</a></h1>
+      <nav class="nav">
+        <a href="Accueil.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="skills.html">Compétences</a>
+        <a href="projects.html">Projets</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Me Contacter</h2>
+      <form id="contactForm" class="form">
+        <label for="name">Nom :</label>
+        <input id="name" name="name" type="text" placeholder="Votre nom" required>
+
+        <label for="email">Email :</label>
+        <input id="email" name="email" type="email" placeholder="vous@exemple.com" required>
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+
+        <div class="form-buttons">
+          <button type="submit" class="submit">Envoyer</button>
+          <button type="reset" class="cancel">Annuler</button>
+        </div>
+      </form>
+
+      <div id="result"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 — Maria Almoctar Idrissa</p>
+    </div>
+  </footer>
+  <script src="javascript.js" defer></script>
+</body>
+</html>
